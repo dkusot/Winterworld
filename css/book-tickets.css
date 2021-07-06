@@ -1,0 +1,54 @@
+/* style the ticked purchase form */
+form-field {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+form-field label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+form-field input {
+  color: #4D94FF;
+  font-family: "Roboto", sans-serif;
+  padding: 0.5em;
+  border-style: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+form-field input.button {
+  width: auto;
+  color: #FFFFFF;
+}
+form-field input[type=number] {
+  width: 50%;
+}
+
+/* style description list for calendar */
+dd {
+  margin-bottom: 0.5em;
+}
+dt {
+  font-style: italic;
+  margin-bottom: 0.2em;
+}
+
+/* make tables pretty */
+table {
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+tbody {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+th {
+  background-color: #3D7DD8;
+}
+td {
+  text-align: right;
+}
+th, td {
+  padding: 0.3em;
+}

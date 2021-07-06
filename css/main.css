@@ -1,0 +1,280 @@
+/* This is the main css file for the project
+It contains everything used on the homepage, and everything used on more
+than one page. Some styles for forms are also kept here because they
+are identical to p styles. This keeps repetition of code down.*/
+
+/* basic elements */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+nav a {
+  font-weight: normal;
+}
+
+a img:hover, a h2:hover {
+  opacity: 0.6;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+    margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* create a button in CSS so a and input elements
+can look like buttons: this simplifies code */
+.button, input[type=submit] {
+  display: inline-block;
+  padding: 1em;
+  /* buttons are fuschia to draw attention to them and direct user
+  towards the ticket buying area */
+  background-color: #A239CA;
+  color: #FFFFFF;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  border-style: none;
+}
+.button:hover, input[type=submit]:hover {
+  background-color: #8032A5;
+}
+
+/* style form elements and other similar things in
+the same way p elements are styled for visual consistency */
+p, form, dl, table {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+/* contains everything on page */
+#content-container {
+  max-width: 60%;
+  margin: auto;
+}
+
+/* keeps flex elements in rows
+also imposes minimum width to avoid things
+getting ridiculous*/
+.row {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+/* make rows fill available space */
+.row section, .row header, .row footer {
+  flex-grow: 1;
+}
+
+
+/* site header image positioning
+and text resize */
+header h1 {
+  background-image: url(../imgs/snowflake-header.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  background-size: cover;
+  padding-top: 180px;
+  padding-bottom: 20px;
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 50px;
+}
+
+/* animate header on mouse over
+and change the colour to indicate
+that it is a link to the user */
+header h1:hover {
+  background-image: url(../imgs/snowflake-header-hover.svg);
+}
+
+header {
+  background-color: #4D94FF;
+  padding: 0;
+  margin: 0.5em;
+}
+
+/* animate the header but only on the homepage */
+@keyframes landing {
+  0% {height: 300px}
+  90% {height: 55px}
+  100% {height: 65px}
+}
+#homepage-header {
+  animation-name: landing;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  position: relative;
+}
+
+/* nav bar */
+#main-nav {
+  margin: 0.5em;
+  min-width: 283px;
+}
+/* strip list of styles */
+#main-nav ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: #4D94FF;
+  display: flex;
+  flex-wrap:wrap;
+}
+/* give last item on nav bar
+a larger margin to make it
+move down a line when it would
+be covered by the social media
+buttons */
+#main-nav li:last-of-type {
+  margin-right: 2em;
+}
+#main-nav li {
+  float: left;
+  font-family: "Roboto Slab", serif;
+  margin-right: 1em;
+}
+#main-nav a {
+  padding: 1em;
+  color: #FFFFFF;
+  display: block;
+}
+#main-nav a:hover {
+  background-color: #3D7DD8;
+}
+
+/* make secti=ons pretty and blue */
+section, footer {
+  background-color: #4D94FF;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+/* style section icons */
+img.section-icon {
+  margin-bottom: 0.5em;
+  height: 75px;
+  width: 75px;
+}
+
+
+#twitter-feed-placeholder {
+  margin: auto;
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
+
+/* style social media buttons and make them float on the side, centered
+vertically */
+#social-buttons {
+  position: fixed;
+  top: 30vh;
+  right: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+#social-buttons a {
+  display: block;
+  margin: 0.5em;
+}
+
+#social-buttons img {
+  height: 75px;
+  width: 75px;
+}
+
+/* format footer as one block (horizontal)*/
+#footer-part-one {
+  margin-right: 0;
+}
+
+#footer-part-two {
+  margin-left: 0;
+  text-align: right;
+}
+
+/* define gallery for food and rides sections */
+.gallery img {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  min-width: 100px;
+}
+
+/* wrapper for centering elements which are hard to center */
+div .center-contents {
+  text-align: center;
+}
+
+
+/* on medium devices, remove whitespace on
+sides of site and take away some margins */
+@media only screen and (max-width: 1070px){
+  p, form, dl, table {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  #content-container {
+    max-width: 100%;
+  }
+  #social-buttons img {
+    /* maniuplate alpha value to make sm buttons semitransparent when displayed
+    over the top of the page */
+    opacity: 0.6;
+  }
+  #social-buttons img:hover {
+    /* make buttons opaque on hover */
+    opacity: 1;
+  }
+}
+
+/* on mobile devices, put every section on its
+own row */
+@media only screen and (max-width: 520px){
+  .row {
+    flex-wrap: wrap;
+  }
+  p, form, dl, table {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+  body {
+    font-size: 16px;
+    }
+
+    /* format footer as one block (vertical) */
+    #footer-part-one {
+      margin-right: 0.5em;
+      margin-bottom: 0;
+    }
+    #footer-part-two {
+      margin-left: 0.5em;
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+}

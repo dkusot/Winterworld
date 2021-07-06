@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="./css/main.css">
+   <link rel="stylesheet" type="text/css" href="./css/book-tickets.css">
+   <title>Winter World</title>
+ </head>
+ <body>
+    <div id="content-container">
+      <div class="row">
+        <header>
+          <a href=./index.html><h1> Winter World </h1></a>
+       </header>
+      </div>
+
+
+      <nav id="main-nav">
+       <ul>
+         <li><a href="./rides.html">Rides</a></li>
+         <li><a href="./book-tickets.html">Book Tickets</a></li>
+         <li><a href="./food-and-services.html">Food & Services</a></li>
+         <li><a href="./accessibility.html">Accessibility</a></li>
+       </ul>
+      </nav>
+
+
+    <div class="row">
+      <section id="booking-form">
+        <h2> Book Tickets </h2>
+        <form>
+          <form-field>
+            <label for="firstName">Full Name:</label>
+            <input name="firstName" type="text" autofocus>
+          </form-field>
+          <form-field>
+            <label for="ticketNum1">Number of Child Tickets:</label>
+            <input name="ticketNum1" type="number" min="1" max="20">
+          </form-field>
+          <form-field>
+            <label for="ticketNum2">Number of Adult Tickets:</label>
+            <input name="ticketNum2" type="number" min="1" max="20">
+          </form-field>
+          <form-field>
+            <label for="ticketDate">Ticket Date:</label>
+            <input name="ticketDate" type="date" placeholder="000">
+          </form-field>
+          <form-field>
+            <label for="emailAddress">Email Address:</label>
+            <input name="emailAddress" type="email" min="1" max="20">
+          </form-field>
+          <form-field>
+            <label for="cardNumber">Long Card Number:</label>
+            <input name="cardNumber" type="text" placeholder="0000-0000-0000-0000">
+          </form-field>
+          <form-field>
+            <label for="cvv">3 Digit Security Code:</label>
+            <input name="cvv" type="text" placeholder="000">
+          </form-field>
+          <form-field>
+            <label for="expiry">Expiry Date</label>
+            <input name="expiry" type="date" placeholder="000">
+          </form-field>
+          <form-field>
+            <input name="submit" type="submit" value="Make Booking">
+          </form-field>
+        </form>
+      </section>
+      <section id="calendar">
+        <h2>Our Calendar</h2>
+        <h3>November</h3>
+        <dl>
+          <dt><time datetime="2019-11-05 19:00">5th November</time></dt>
+          <dd>Firework Display</dd>
+          <dt><time datetime="2019-11-09 19:00">9th November</time> </dt>
+          <dd> Ice Skating Begins </dd>
+          <dt><time datetime="2019-11-17 19:00">17th November</time></dt>
+          <dd>Winter Markets Open </dd>
+        </dl>
+        <h3>December</h3>
+        <dl>
+          <dt><time datetime="2019-12-01 19:00">1st December</time></dt>
+          <dd>Founder's Birthday Celebration</dd>
+          <dt><time datetime="2019-12-25 19:00">9th November</time> </dt>
+          <dd>Great Feast</dd>
+        </dl>
+        <h3>January</h3>
+        <dl>
+          <dt><time datetime="2020-01-01 19:00">1st January</time></dt>
+          <dd>New Year Celebration</dd>
+          <dt><time datetime="2020-01-31 19:00">31st January</time> </dt>
+          <dd>Closing Ceremony</dd>
+        </dl>
+      </section>
+    </div>
+
+    <div class="row">
+      <section id="ticket-info">
+        <table>
+      		<tr>
+
+      			<th> Ticket Type</th>
+      			<th> Off Peak</th>
+      			<th> Peak</th>
+
+      		</tr>
+
+      		<tr>
+
+      			<td> Adult </td>
+      			<td> £15 </td>
+      			<td> £20 </td>
+
+      		</tr>
+
+      		<tr>
+
+      			<td> Child </td>
+      			<td> £7.50 </td>
+      			<td> £12.50 </td>
+
+      		</tr>
+
+      		<tr>
+
+      			<td> Student </td>
+      			<td> £10 </td>
+      			<td> £15 </td>
+
+      		</tr>
+
+      		<tr>
+
+      			<td> Senior </td>
+      			<td> £10 </td>
+      			<td> £15 </td>
+
+      		</tr>
+
+      	</table>
+
+
+      </section>
+
+      <section id="ride-with-family">
+        <img class="section-icon" src="./imgs/family-icon.svg" alt="family icon">
+        <h2> Ride with your Family! </h2>
+        <p>
+          Buy tickets for at 1 adult and at least 2 children, or 2 adults and
+          at least 1 child, to receive a 75% discount on your entire ticket purchase!
+        </p>
+      </section>
+
+    </div>
+
+    <div class="row">
+      <section id="student-and-disabled-discount">
+        <img class="section-icon" src="./imgs/wheelchair-icon.svg" alt="wheelchair user icon">
+        <h2> Student & Disabled Discount</h2>
+        <p>
+          Users of mobility aids or wheelchairs and recipients of PIP, DLA or ESA
+          receive a 75% discount on tickets. Contact us for more details.
+        </p>
+        <p>
+          Guests who can produce a valid student ID or NUS card receive a 25%
+          discount.
+        </p>
+      </section>
+
+      <section id="opening-times">
+        <h2> Opening Times </h2>
+        <p>
+          <time datetime="2019-11-01 16:00">November</time> to
+          <time datetime="2019-12-31 21:00">January</time>
+        </p>
+        <p>
+          <time>4pm</time> - <time>10pm</time> Weekdays
+        </p>
+        <p>
+          <time>11am</time> - <time>10pm</time> Weekends
+        </p>
+      </section>
+
+    </div>
+
+    <!-- Social media icon sidebar -->
+    <nav id="social-buttons">
+      <a href ="https://twitter.com">
+        <img src="./imgs/twitter-icon.svg" alt="twitter icon">
+      </a>
+      <a href ="https://instagram.com">
+        <img src="./imgs/instagram-icon.svg" alt="instagram icon">
+      </a>
+      <a href ="https://en-gb.facebook.com">
+        <img src="./imgs/facebook-icon.svg" alt="facebook icon">
+      </a>
+    </nav>
+
+    <div class="row">
+      <footer id="footer-part-one">
+        <p>
+          Southwark Park <br/>
+          Gomm Road <br/>
+          London, SE16 2ET
+        </p>
+      </footer>
+      <footer id="footer-part-two">
+        <p>
+          &copy; Winter World 2019 <br/>
+          This site does not use cookies. <br/>
+          (They were eaten by Santa)
+        </p>
+      </footer>
+    </div>
+
+  </div>
+ </body>
+</html>
